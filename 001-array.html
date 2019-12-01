@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script src="js/lodash.js"></script>
+<script>
+    let res = compact([0, 1, false, 2, '', 3]);
+    console.log(res)
+
+
+    function compact(array) {
+        var index = -1,
+            length = array == null ? 0 : array.length,
+            resIndex = 0,
+            result = [];
+
+        /* while (++index < length) {
+          var value = array[index];
+          if (value) {
+            result[resIndex++] = value;
+          }
+        } */
+
+        for (let i = 0; i < length; i++) {
+            let value = array[i]
+            if (value) {
+                result[resIndex] = value
+                resIndex++
+                // 可以等价为下面这种写法
+                result[resIndex++] = value
+            }
+        }
+        return result;
+    }
+</script>
+
+</html>
