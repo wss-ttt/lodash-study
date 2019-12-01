@@ -13,8 +13,17 @@
 </body>
 <script src="js/lodash.js"></script>
 <script>
+    // 1 去假
     let res = compact([0, 1, false, 2, '', 3]);
     console.log(res)
+    // 2 去重
+    let res2 = _.uniq(['乔峰','杨过','小龙女','乔峰',])
+    console.log(res2) 
+    
+    // 3 删除元素
+    debugger
+    let res3 = _.pull(['乔峰','杨过','小龙女'],'乔峰')
+    console.log(res3)
 
 
     function compact(array) {
